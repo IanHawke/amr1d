@@ -1,0 +1,17 @@
+&system_params 
+ system = 'euler'
+  /
+
+&grid_params base_n_points = 200,
+ last_time = 0.25,
+ xmin = -0.5, xmax = 0.5,
+ n_convergence = 1,
+ max_refinement_levels = 2,
+ amr_error = 0.0005,
+ ghostzones = 2 /
+
+&method_params courant = 0.2, 
+ boundary = 'outflow',
+ limiter = 'minmod'
+ spatial_differencing = 'TVD',
+ variable_timestep = 'no'/

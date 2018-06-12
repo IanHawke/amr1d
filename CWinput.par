@@ -1,0 +1,22 @@
+&system_params 
+ system = 'euler',
+ euler_x_l = 0.1,
+ euler_x_r = 0.9,
+ euler_rho_l = 1.0, euler_v_l = 0.0, euler_p_l = 1000.0,
+ euler_rho_m = 1.0, euler_v_m = 0.0, euler_p_m = 0.01,
+ euler_rho_r = 1.0, euler_v_r = 0.0, euler_p_r = 100.0
+  /
+
+&grid_params base_n_points = 40,
+ last_time = 0.038,
+ xmin = 0.0, xmax = 1.0,
+ n_convergence = 1,
+ max_refinement_levels = 12,
+ amr_error = 0.005,
+ ghostzones = 2 /
+
+&method_params courant = 0.2, 
+ boundary = 'reflection',
+ spatial_differencing = 'TVD',
+ limiter = 'mc',
+ variable_timestep = 'yes'/
